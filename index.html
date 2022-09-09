@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="output.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    </head>
+    <body class="grid min-h-screen min-w-full place-items-center font-['Poppins'] text-white">
+        <div class="rounded-xl bg-cyan-200 p-8 shadow-lg">
+            <h1 class="mx-auto block max-w-max rounded-full p-4 text-center text-4xl font-semibold">My To-Do list</h1>
+            <form class="mt-4 flex w-full items-center gap-4">
+                <input type="text" name="taskInput" id="taskInput" placeholder="Enter a task here" class="block grow rounded-full py-2 px-4 text-center font-light text-black focus:outline-none" />
+                <button id="taskSubmit" for="taskInput" class="content h-11 w-11 rounded-full bg-blue-500 text-2xl text-white">&#10140;</button>
+            </form>
+            <ul id="taskList" class="mt-8 space-y-4 text-center font-light text-black"></ul>
+            <template id="taskTemplate">
+                <div class="flex items-center gap-4">
+                    <li id="task" class="grow rounded-full bg-white px-8 py-2">Lorem ipsum dolor sit amet.</li>
+                    <button id="taskDelete" class="h-11 w-11 shrink-0 rounded-full bg-emerald-400 text-xl text-white">&#10004;</button>
+                    <button id="taskModify" class="h-11 w-11 shrink-0 rounded-full bg-yellow-400 text-xl font-extrabold text-white">&#9998;</button>
+                </div>
+            </template>
+        </div>
+        <script src="./main.js"></script>
+    </body>
+</html>
